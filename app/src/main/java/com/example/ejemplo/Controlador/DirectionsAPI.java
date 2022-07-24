@@ -1,4 +1,6 @@
-package com.example.ejemplo;
+package com.example.ejemplo.Controlador;
+
+import com.example.ejemplo.Modelo.Direction;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

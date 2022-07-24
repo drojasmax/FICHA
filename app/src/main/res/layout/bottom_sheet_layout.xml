@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/lyMenu"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/style_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="7dp"
+    app:behavior_hideable="false"
+    app:behavior_peekHeight="62dp"
+    app:layout_behavior="com.google.android.material.bottomSheet.BottomSheetBehavior">
+
+    <EditText
+        android:id="@+id/etUbiActual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_border_button_desplegar_menu"
+        android:ems="10"
+        android:hint="@string/txtUbiActual"
+        android:inputType="none"
+        android:minHeight="48dp" />
+
+    <EditText
+        android:id="@+id/etUbiDestino"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/style_border_button_desplegar_menu"
+        android:ems="10"
+        android:hint="@string/txtUbiDestino"
+        android:inputType="none"
+        android:minHeight="48dp" />
+
+    <Button
+        android:id="@+id/btnBuscarVehiculo"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/style_border_button"
+        android:text="@string/btnIr" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnCasa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/style_border_button"
+            android:drawableLeft="@drawable/ic_house"
+            android:text="@string/btnCasa" />
+
+        <Button
+            android:id="@+id/btnTrabajo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/style_border_button"
+            android:drawableLeft="@drawable/ic_work"
+            android:text="@string/btnTrabajo" />
+
+        <Button
+            android:id="@+id/btnLugares"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/style_border_button"
+            android:drawableLeft="@drawable/ic_favorite_places"
+            android:text="@string/btnLugares" />
+    </LinearLayout>
+</LinearLayout>

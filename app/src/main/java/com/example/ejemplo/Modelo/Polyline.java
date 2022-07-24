@@ -1,4 +1,4 @@
-package com.example.ejemplo;
+package com.example.ejemplo.Modelo;
 
 public class Polyline {
     private String points;
