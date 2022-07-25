@@ -69,4 +69,9 @@
     <string name="iniciarsesion">Iniciar sesion</string>
     <string name="notienescuenta">¿No tienes cuenta?</string>
     <string name="registrate">Registrate</string>
+    <string name="Ficha">Ficha</string>
+    <string name="usuario">usuario</string>
+    <string name="password">pass</string>
+    <string name="iniciar_sesion">iniciarSesion</string>
+    <string name="iniciar_sesi_n">iniciar</string>
 </resources>
