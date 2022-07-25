@@ -15,6 +15,17 @@
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/Ejemplo/app/src/main/res/menu/menu_conductor.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/Ejemplo/app/src/main/res/menu/menu_pasajero.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/Ejemplo/app/src/main/res/menu/pmenu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/background_center_silver.xml" value="0.2115" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/bg_round.xml" value="0.2115" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/color_item_bttmappbar.xml" value="0.2115" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_ayuda.xml" value="0.2115" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2115" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_support_24.xml" value="0.2115" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_call.xml" value="0.1" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.25" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_pasajero.xml" value="0.1" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/dialogo_de_carga.xml" value="0.22" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/toolbar.xml" value="0.19202898550724637" />
       </map>
     </option>
   </component>

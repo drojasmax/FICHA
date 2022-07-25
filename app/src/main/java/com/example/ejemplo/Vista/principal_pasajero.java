@@ -3,16 +3,13 @@ package com.example.ejemplo.Vista;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
-import android.location.Location;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -25,7 +22,6 @@ import com.example.ejemplo.Controlador.DirectionsAPI;
 import com.example.ejemplo.Modelo.Direction;
 import com.example.ejemplo.Modelo.Polyline;
 import com.example.ejemplo.Modelo.Step;
-import com.example.ejemplo.Modelo.Trayecto;
 import com.example.ejemplo.R;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -64,17 +60,19 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
     LatLng mFromLatLng, mToLatLng;
     Marker markerFrom = null, markerTo = null;
     private BottomSheetBehavior bottomSheetBehavior;
+    dialogo_de_carga loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.principal_pasajero);
+        setContentView(R.layout.activity_principal_pasajero);
         //miLocalizacion();
         setupMap();
         menuInferiorDesplegable();
 
-        androidx.appcompat.widget.Toolbar tb = findViewById(R.id.toolbar);
+        Toolbar tb = findViewById(R.id.toolbar);
         setSupportActionBar(tb);
+
 
         etUbiActual = findViewById(R.id.etUbiActual);
         etUbiDestino = findViewById(R.id.etUbiDestino);
@@ -96,7 +94,7 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
     }
 
     private void startAutocomplete(int requestCode) {
-        Places.initialize(getApplicationContext(), "AIzaSyAnqyuc34HCfl0sIDOhQ2fYs7LJHhozCa8");
+        Places.initialize(getApplicationContext(), getString(R.string.googleAPIKEY));
         // Fields of place data to return after the user has made a selection
         List<Place.Field> fields = Arrays.asList(Place.Field.ADDRESS, Place.Field.LAT_LNG, Place.Field.NAME);
         // Start the autocomplete intent.
@@ -145,10 +143,8 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
             }
             Button btnBuscarVehiculo = findViewById(R.id.btnBuscarVehiculo);
             btnBuscarVehiculo.setOnClickListener(view -> {
-
-
+                loadingDialog.startLoadingDialog();
                 //Trayecto t = new Trayecto();
-
             });
         }
         super.onActivityResult(requestCode, resultCode, data);

@@ -20,7 +20,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/DimGray"
                 app:menu="@menu/menu_pasajero"
-                app:title="toolbarTittle"></androidx.appcompat.widget.Toolbar>
+                app:title="toolbarTittle" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
