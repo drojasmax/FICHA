@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
+            android:background="@color/LightGray"
             android:gravity="left" />
 
     </LinearLayout>
@@ -53,6 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
+            android:background="@color/LightGray"
             android:gravity="left" />
     </LinearLayout>
 
@@ -74,6 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:layout_weight="1"
+            android:background="@color/LightGray"
             android:gravity="right|left" />
     </LinearLayout>
 
@@ -82,6 +85,7 @@
         android:layout_width="161dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:background="@drawable/style_border_button"
         android:text="@string/btnConfirmarViaje" />
 
 </LinearLayout>

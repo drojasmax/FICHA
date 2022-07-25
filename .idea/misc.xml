@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/COP412L/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_menu_destino.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/COP412L/AndroidStudioProjects/FICHA/app/src/main/res/layout/principal_pasajero.xml" value="0.17831813576494426" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/Ejemplo/app/src/main/res/drawable-v24/background_center_silver.xml" value="0.1795" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/Ejemplo/app/src/main/res/drawable-v24/ic_ayuda.xml" value="0.1795" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/Ejemplo/app/src/main/res/layout/activity_maps.xml" value="0.16847826086956522" />

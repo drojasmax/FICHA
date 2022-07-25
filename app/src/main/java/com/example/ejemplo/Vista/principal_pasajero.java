@@ -2,6 +2,7 @@ package com.example.ejemplo.Vista;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -17,13 +18,14 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.ejemplo.Controlador.DirectionsAPI;
 import com.example.ejemplo.Modelo.Direction;
 import com.example.ejemplo.Modelo.Polyline;
 import com.example.ejemplo.Modelo.Step;
+import com.example.ejemplo.Modelo.Trayecto;
 import com.example.ejemplo.R;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -42,19 +44,17 @@ import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.maps.android.PolyUtil;
-
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.Arrays;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class principal_pasajero extends FragmentActivity implements OnMapReadyCallback {
+public class principal_pasajero extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     String sFromLocation, sToLocation;
@@ -69,7 +69,7 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.principal_pasajero);
-        miLocalizacion();
+        //miLocalizacion();
         setupMap();
         menuInferiorDesplegable();
 
@@ -83,6 +83,8 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
 
         etUbiActual.setOnClickListener(view -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_FROM));
         etUbiDestino.setOnClickListener(view -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_TO));
+
+
 
     }
 
@@ -119,9 +121,6 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
             assert data != null;
             Place place = Autocomplete.getPlaceFromIntent(data);
             etUbiDestino.setText(place.getAddress());
-            if (etUbiDestino != null){
-                callDirectionsAPI();
-            }
             mToLatLng = place.getLatLng();
             setMarkerTo(mToLatLng);
         } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
@@ -140,18 +139,24 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
                 String destinationEncoded = URLEncoder.encode(destination, "utf-8");
                 sFromLocation = originEncoded;
                 sToLocation = destinationEncoded;
+                callDirectionsAPI();
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
-        }
+            Button btnBuscarVehiculo = findViewById(R.id.btnBuscarVehiculo);
+            btnBuscarVehiculo.setOnClickListener(view -> {
 
+
+                //Trayecto t = new Trayecto();
+
+            });
+        }
         super.onActivityResult(requestCode, resultCode, data);
     }
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-
             return;
         }
         mMap.setMyLocationEnabled(true);
@@ -161,7 +166,7 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
         MarkerOptions marker = new MarkerOptions()
                 .position(latLng)
                 .title(title);
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20f));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 15f));
         return mMap.addMarker(marker);
     }
     public void setMarkerFrom(LatLng latLng) {
@@ -184,7 +189,6 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
                 .build();
         DirectionsAPI api = retrofit.create(DirectionsAPI.class);
         Call<Direction> call = api.getDirection(sFromLocation, sToLocation, "AIzaSyAnqyuc34HCfl0sIDOhQ2fYs7LJHhozCa8");
-
         call.enqueue(new Callback<Direction>() {
             @Override
             public void onResponse(@NonNull Call<Direction> call, @NonNull Response<Direction> response) {
@@ -202,7 +206,7 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
             }
         });
     }
-
+    /*
     private void miLocalizacion() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, new String[]{
@@ -216,7 +220,7 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
             Log.d("Longitud",String.valueOf(location.getLatitude()));
         }
     }
-
+    */
     private void menuInferiorDesplegable() {
         FloatingActionButton fab = findViewById(R.id.fab);
         View bottomSheet = findViewById(R.id.bottom_sheet);
@@ -230,22 +234,11 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
                 public void onStateChanged(@NonNull View bottomSheet1, int newState) {
                     if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
                         etUbiActual = findViewById(R.id.etUbiActual);
-                        etUbiActual.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_FROM);
-                            }
-                        });
+                        etUbiActual.setOnClickListener(view12 -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_FROM));
                         etUbiDestino = findViewById(R.id.etUbiDestino);
-                        etUbiDestino.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View view) {
-                                startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_TO);
-                            }
-                        });
+                        etUbiDestino.setOnClickListener(view1 -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_TO));
                     }
                 }
-
                 @Override
                 public void onSlide(@NonNull View bottomSheet1, float slideOffset) {
 
@@ -260,13 +253,12 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
         getMenuInflater().inflate(R.menu.menu_pasajero, menu);
         return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.opPerfil) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(getApplicationContext(), Perfil.class);
+            //Intent i = new Intent(getApplicationContext(), Perfil.class);
             Bundle paquete = getIntent().getExtras();
             String idusuario = null;
             String correo = null;
@@ -274,9 +266,9 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
                 idusuario = paquete.getString("idusuario");
                 correo = paquete.getString("correo");
             }
-            i.putExtra("idusuario", idusuario);
-            i.putExtra("correo", correo);
-            startActivity(i);
+            //i.putExtra("idusuario", idusuario);
+            //i.putExtra("correo", correo);
+            //startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
