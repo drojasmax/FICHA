@@ -69,4 +69,16 @@
     <string name="iniciarsesion">Iniciar sesion</string>
     <string name="notienescuenta">¿No tienes cuenta?</string>
     <string name="registrate">Registrate</string>
+    <string name="iniciar_sesion">iniciar</string>
+    <string name="Ficha">Ficha</string>
+    //Diego
+    <string name="usuario">usuario</string>
+    <string name="Contrasena">Contrasena</string>
+    <string name="Llegar">Llegar</string>
+    <string name="Rumbo">Rumbo</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Llegado">Llegado</string>
+    <item name="frameLayout" type="id">frame</item>
+    <item name="textView14" type="id" />
 </resources>

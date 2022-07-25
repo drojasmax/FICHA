@@ -74,7 +74,7 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
         menuInferiorDesplegable();
 
         androidx.appcompat.widget.Toolbar tb = findViewById(R.id.toolbar);
-        setSupportActionBar(tb);
+        //setSupportActionBar(tb);
 
         etUbiActual = findViewById(R.id.etUbiActual);
         etUbiDestino = findViewById(R.id.etUbiDestino);
@@ -266,7 +266,7 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
         int id = item.getItemId();
         if (id == R.id.opPerfil) {
             Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
-            Intent i = new Intent(getApplicationContext(), Perfil.class);
+            //      Intent i = new Intent(getApplicationContext(), Perfil.class);
             Bundle paquete = getIntent().getExtras();
             String idusuario = null;
             String correo = null;
@@ -274,9 +274,9 @@ public class principal_pasajero extends FragmentActivity implements OnMapReadyCa
                 idusuario = paquete.getString("idusuario");
                 correo = paquete.getString("correo");
             }
-            i.putExtra("idusuario", idusuario);
-            i.putExtra("correo", correo);
-            startActivity(i);
+            //i.putExtra("idusuario", idusuario);
+            //i.putExtra("correo", correo);
+            //startActivity(i);
         }
         return super.onOptionsItemSelected(item);
     }
