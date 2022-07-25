@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Ejemplo">
         <activity
+            android:name=".Vista.principal_pasajero"
+            android:exported="false" />
+        <activity
             android:name=".Vista.principal_conductor"
             android:exported="false" />
         <!--
@@ -32,7 +35,7 @@
             android:value="AIzaSyBTPrD5Bj591ELSXvzRDgKUuJSz33nThkk" />
 
         <activity
-            android:name=".Vista.principal_pasajero"
+            android:name=".Login"
             android:exported="true"
             android:label="@string/title_activity_maps">
             <intent-filter>
