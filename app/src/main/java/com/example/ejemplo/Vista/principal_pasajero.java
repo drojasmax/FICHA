@@ -14,6 +14,9 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -36,6 +39,8 @@ import com.google.android.libraries.places.api.model.Place;
 import com.google.android.libraries.places.widget.Autocomplete;
 import com.google.android.libraries.places.widget.AutocompleteActivity;
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.maps.android.PolyUtil;
 
 import java.io.UnsupportedEncodingException;
@@ -49,7 +54,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class principal_pasajero extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     String sFromLocation, sToLocation;
@@ -58,15 +63,18 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     EditText etUbiActual, etUbiDestino;
     LatLng mFromLatLng, mToLatLng;
     Marker markerFrom = null, markerTo = null;
-    private LocationManager ubicacion;
+    private BottomSheetBehavior bottomSheetBehavior;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_maps);
+        setContentView(R.layout.principal_pasajero);
         miLocalizacion();
+        setupMap();
+        menuInferiorDesplegable();
 
-        Places.initialize(getApplicationContext(), "AIzaSyAnqyuc34HCfl0sIDOhQ2fYs7LJHhozCa8");
+        androidx.appcompat.widget.Toolbar tb = findViewById(R.id.toolbar);
+        setSupportActionBar(tb);
 
         etUbiActual = findViewById(R.id.etUbiActual);
         etUbiDestino = findViewById(R.id.etUbiDestino);
@@ -76,6 +84,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         etUbiActual.setOnClickListener(view -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_FROM));
         etUbiDestino.setOnClickListener(view -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_TO));
 
+    }
+
+    private void setupMap() {
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         assert mapFragment != null;
@@ -91,7 +102,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .build(this);
         startActivityForResult(intent, requestCode);
     }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == REQUEST_CODE_AUTOCOMPLETE_FROM && resultCode == RESULT_OK) {
@@ -109,6 +119,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             assert data != null;
             Place place = Autocomplete.getPlaceFromIntent(data);
             etUbiDestino.setText(place.getAddress());
+            if (etUbiDestino != null){
+                callDirectionsAPI();
+            }
             mToLatLng = place.getLatLng();
             setMarkerTo(mToLatLng);
         } else if (resultCode == AutocompleteActivity.RESULT_ERROR) {
@@ -131,10 +144,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 e.printStackTrace();
             }
         }
-        callDirectionsAPI();
+
         super.onActivityResult(requestCode, resultCode, data);
     }
-
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
@@ -145,7 +157,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setMyLocationEnabled(true);
         mMap.getUiSettings().setMyLocationButtonEnabled(true);
     }
-
     private Marker addMarker(LatLng latLng, String title) {
         MarkerOptions marker = new MarkerOptions()
                 .position(latLng)
@@ -153,14 +164,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 20f));
         return mMap.addMarker(marker);
     }
-
     public void setMarkerFrom(LatLng latLng) {
         if (markerFrom != null) {
             markerFrom.remove();
         }
         markerFrom = addMarker(latLng, "Desde");
     }
-
     public void setMarkerTo(LatLng latLng) {
         if (markerTo != null) {
             markerTo.remove();
@@ -200,11 +209,75 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION
             }, 1000);
         }
-        ubicacion = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        LocationManager ubicacion = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         Location location = ubicacion.getLastKnownLocation(LocationManager.GPS_PROVIDER);
         if (ubicacion != null){
             Log.d("Latitud",String.valueOf(location.getLongitude()));
             Log.d("Longitud",String.valueOf(location.getLatitude()));
         }
+    }
+
+    private void menuInferiorDesplegable() {
+        FloatingActionButton fab = findViewById(R.id.fab);
+        View bottomSheet = findViewById(R.id.bottom_sheet);
+        bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+        bottomSheetBehavior.setPeekHeight(0);
+        bottomSheetBehavior.setHideable(true);
+        fab.setOnClickListener(view -> {
+            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
+            bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+                @Override
+                public void onStateChanged(@NonNull View bottomSheet1, int newState) {
+                    if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
+                        etUbiActual = findViewById(R.id.etUbiActual);
+                        etUbiActual.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_FROM);
+                            }
+                        });
+                        etUbiDestino = findViewById(R.id.etUbiDestino);
+                        etUbiDestino.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_TO);
+                            }
+                        });
+                    }
+                }
+
+                @Override
+                public void onSlide(@NonNull View bottomSheet1, float slideOffset) {
+
+                }
+            });
+        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(@NonNull Menu menu) {
+        //Incoporar menú dentro de Activity
+        getMenuInflater().inflate(R.menu.menu_pasajero, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.opPerfil) {
+            Toast.makeText(this, "Perfil", Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(getApplicationContext(), Perfil.class);
+            Bundle paquete = getIntent().getExtras();
+            String idusuario = null;
+            String correo = null;
+            if (paquete != null) {
+                idusuario = paquete.getString("idusuario");
+                correo = paquete.getString("correo");
+            }
+            i.putExtra("idusuario", idusuario);
+            i.putExtra("correo", correo);
+            startActivity(i);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

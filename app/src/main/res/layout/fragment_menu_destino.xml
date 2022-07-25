@@ -78,7 +78,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnConfirmarViaje"
         android:layout_width="161dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"

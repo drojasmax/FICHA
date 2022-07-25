@@ -30,7 +30,7 @@
             android:value="AIzaSyBTPrD5Bj591ELSXvzRDgKUuJSz33nThkk" />
 
         <activity
-            android:name=".Vista.MapsActivity"
+            android:name=".Vista.principal_pasajero"
             android:exported="true"
             android:label="@string/title_activity_maps">
             <intent-filter>
