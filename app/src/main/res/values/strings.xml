@@ -1,9 +1,14 @@
 <resources>
     //Strings - Duvan
     <string name="app_name">Ejemplo</string>
+    <string name="cargandoDialog">Esperando confirmación de conductor...</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_google_maps_api">google_maps_api</string>
     <string name="btnDireccion">¿Dónde se dirige?</string>
+    <string name="txIngresarPrecio">Ingrese un precio</string>
+    <string name="nombreHeader">Juanito Perez</string>
+    <string name="opVehiculo">Mi Vehiculo</string>
+    <string name="opCuenta">Mi Cuenta</string>
     <string name="btnDirxccion">¿Dónde se dirige?</string>
     <string name="btnCasa">Casa</string>
     <string name="btnTrabajo">Trabajo</string>
@@ -69,9 +74,12 @@
     <string name="iniciarsesion">Iniciar sesion</string>
     <string name="notienescuenta">¿No tienes cuenta?</string>
     <string name="registrate">Registrate</string>
-    <string name="Ficha">Ficha</string>
-    <string name="usuario">usuario</string>
-    <string name="password">pass</string>
+    <string name="usuario">Usuario</string>
+    <string name="sistema">Sistema</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="iniciar_sesion">iniciarSesion</string>
     <string name="iniciar_sesi_n">iniciar</string>
+    <string name="password">pass</string>
+    <string name="Ficha">Ficha</string>
 </resources>
