@@ -2,25 +2,41 @@
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/opPerfil"
-        android:icon="@drawable/ic_people"
-        android:title="@string/miperfil"
-        app:showAsAction="never" />
-    <item
-        android:id="@+id/opSeguridad"
-        android:icon="@drawable/ic_seguridad"
-        android:title="@string/mCSeguridad" />
-    <item
-        android:id="@+id/opConfiguracion"
-        android:icon="@drawable/ic_configuraciones"
-        android:title="@string/mCConfiguraciones" />
-    <item
-        android:id="@+id/opAyuda"
-        android:icon="@drawable/ic_ayuda"
-        android:title="@string/mCAyuda" />
-    <item
-        android:id="@+id/opSoporte"
-        android:icon="@drawable/ic_baseline_support_24"
-        android:title="@string/mCSoporte" />
+    <item android:title="@string/usuario">
+        <menu>
+            <item
+                android:id="@+id/opPerfil"
+                android:icon="@drawable/ic_people"
+                android:title="@string/miperfil">
+            </item>
+            <item
+                android:id="@+id/opVehiculo"
+                android:icon="@drawable/ic_car"
+                android:title="@string/opVehiculo" />
+            <item
+                android:id="@+id/opCuenta"
+                android:icon="@drawable/ic_money"
+                android:title="@string/opCuenta" />
+        </menu>
+    </item>
+    <item android:title="@string/sistema">
+        <menu>
+            <item
+                android:id="@+id/opConfiguracion"
+                android:icon="@drawable/ic_configuraciones"
+                android:title="@string/mCConfiguraciones" />
+            <item
+                android:id="@+id/opSeguridad"
+                android:icon="@drawable/ic_seguridad"
+                android:title="@string/mCSeguridad" />
+            <item
+                android:id="@+id/opSoporte"
+                android:icon="@drawable/ic_baseline_support_24"
+                android:title="@string/mCSoporte" />
+            <item
+                android:id="@+id/opAyuda"
+                android:icon="@drawable/ic_ayuda"
+                android:title="@string/mCAyuda" />
+        </menu>
+    </item>
 </menu>
