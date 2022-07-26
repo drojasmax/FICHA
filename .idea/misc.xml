@@ -22,13 +22,24 @@
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2115" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_support_24.xml" value="0.2115" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_call.xml" value="0.1" />
-        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.25" />
-        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_pasajero.xml" value="0.1" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/style_border_button_desplegar_menu.xml" value="0.201" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.22" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_pasajero.xml" value="0.22" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/bottom_sheet_layout.xml" value="0.19701086956521738" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/dialogo_de_carga.xml" value="0.22" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_menu_destino.xml" value="0.21" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_mi_vehiculo.xml" value="0.17346014492753623" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_pago.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_solicitudes_t.xml" value="0.25" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/header.xml" value="0.22" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/item_solicitudes.xml" value="0.13405797101449277" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/loading_dialog.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/toolbar.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/menu/menu_conductor.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>

@@ -23,6 +23,7 @@ import com.example.ejemplo.Modelo.Direction;
 import com.example.ejemplo.Modelo.Polyline;
 import com.example.ejemplo.Modelo.Step;
 import com.example.ejemplo.R;
+import com.example.ejemplo.Vista.Fragmento.menu_destino;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -60,7 +61,6 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
     LatLng mFromLatLng, mToLatLng;
     Marker markerFrom = null, markerTo = null;
     private BottomSheetBehavior bottomSheetBehavior;
-    dialogo_de_carga loadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -141,9 +141,11 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
+            final loading_dialog loadingDialog = new loading_dialog(principal_pasajero.this);
             Button btnBuscarVehiculo = findViewById(R.id.btnBuscarVehiculo);
             btnBuscarVehiculo.setOnClickListener(view -> {
                 loadingDialog.startLoadingDialog();
+                menu_destino menuDestino = new menu_destino();
                 //Trayecto t = new Trayecto();
             });
         }

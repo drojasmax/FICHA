@@ -35,8 +35,10 @@
                 android:layout_gravity="bottom|right"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="30dp"
+                android:background="@color/DimGray"
                 android:clickable="true"
                 android:contentDescription="@string/btnDireccion"
+                android:tint="@color/black"
                 app:srcCompat="@drawable/ic_car" />
 
 
