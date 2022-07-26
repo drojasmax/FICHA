@@ -74,4 +74,7 @@
     <string name="password">pass</string>
     <string name="iniciar_sesion">iniciarSesion</string>
     <string name="iniciar_sesi_n">iniciar</string>
+    <string name="imagenPerro">imagenPerro</string>
+    <string name="fecha">Fecha</string>
+
 </resources>
