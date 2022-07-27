@@ -82,8 +82,6 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
         etUbiActual.setOnClickListener(view -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_FROM));
         etUbiDestino.setOnClickListener(view -> startAutocomplete(REQUEST_CODE_AUTOCOMPLETE_TO));
 
-
-
     }
 
     private void setupMap() {
@@ -145,8 +143,8 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
             Button btnBuscarVehiculo = findViewById(R.id.btnBuscarVehiculo);
             btnBuscarVehiculo.setOnClickListener(view -> {
                 loadingDialog.startLoadingDialog();
-                menu_destino menuDestino = new menu_destino();
-                //Trayecto t = new Trayecto();
+
+                //Solicitud t = new Solicitud();
             });
         }
         super.onActivityResult(requestCode, resultCode, data);
