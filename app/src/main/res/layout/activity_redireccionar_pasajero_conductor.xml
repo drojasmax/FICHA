@@ -73,7 +73,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="7dp"
         android:background="@drawable/style_border_button"
-        android:onClick="Enviar"
+        android:onClick="redireccionarVista"
         android:text="@string/btnSiguiente" />
 
     <ImageView
