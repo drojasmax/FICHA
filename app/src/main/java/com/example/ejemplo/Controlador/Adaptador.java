@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -31,6 +32,12 @@ public class Adaptador extends ArrayAdapter<Solicitud> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_solicitudes, null, true);
 
-        return super.getView(position, convertView, parent);
+        TextView inicio = v.findViewById(R.id.tvNombreInicio);
+        TextView destino = v.findViewById(R.id.tvNombreUbiDestino);
+
+        inicio.setText(arraySolicitudes.get(position).getNombreInicio());
+        destino.setText(arraySolicitudes.get(position).getNombreDestino());
+
+        return v;
     }
 }

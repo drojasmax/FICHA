@@ -16,7 +16,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/tvIdSolicitud"
+            android:id="@+id/tvNombreInicio"
             android:textSize="18dp"
             android:textAlignment="center"
             android:textColor="@color/black"/>

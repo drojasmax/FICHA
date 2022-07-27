@@ -143,7 +143,7 @@ public class principal_pasajero extends AppCompatActivity implements OnMapReadyC
             Button btnBuscarVehiculo = findViewById(R.id.btnBuscarVehiculo);
             btnBuscarVehiculo.setOnClickListener(view -> {
                 loadingDialog.startLoadingDialog();
-                menu_destino menuDestino = new menu_destino();
+
                 //Solicitud t = new Solicitud();
             });
         }

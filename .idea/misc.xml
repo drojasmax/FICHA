@@ -22,16 +22,19 @@
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2115" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_support_24.xml" value="0.2115" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_call.xml" value="0.1" />
-        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.18" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_mi_vehiculo.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.1" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_pasajero.xml" value="0.1" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/dialogo_de_carga.xml" value="0.22" />
-        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_clasificacion.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_ayuda.xml" value="0.19010416666666666" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_clasificacion.xml" value="0.25" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_configuracion.xml" value="0.19010416666666666" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_menu_destino.xml" value="0.21" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_mi_cuenta_b.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_mi_vehiculo.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_mis_ingresos.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_pago.xml" value="0.13632246376811594" />
-        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_solicitudes.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_solicitudes.xml" value="0.1" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_solicitudes_t.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/header.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/item_solicitudes.xml" value="0.13632246376811594" />
@@ -60,6 +63,10 @@
         <entry key="..\:/Users/DanDie/AndroidStudioProjects/FICHA/app/src/main/res/layout/toolbar.xml" value="0.36666666666666664" />
       </map>
     </option>
+  </component>
+  <component name="JavadocGenerationManager">
+    <option name="OUTPUT_DIRECTORY" value="$USER_HOME$/Desktop/duvan" />
+    <option name="OPTION_INCLUDE_LIBS" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
