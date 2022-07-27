@@ -22,8 +22,8 @@ public class redireccionar_pasajero_conductor extends AppCompatActivity {
 
     public void redireccionarVista(View v){
         Button btnRedireccionar = findViewById(R.id.btnSiguienteRedirec);
-        EditText campoNumero = findViewById(R.id.etPhone);
-        String numero = campoNumero.getText().toString();
+        EditText telefono = findViewById(R.id.etPhone);
+        String numero = telefono.getText().toString();
         if (!numero.equals("")){
             RadioGroup rgClases = findViewById(R.id.rgClases);
             int id = rgClases.getCheckedRadioButtonId();
@@ -32,21 +32,22 @@ public class redireccionar_pasajero_conductor extends AppCompatActivity {
                     btnRedireccionar.setOnClickListener(view -> {
 
                         Intent i = new Intent(getApplicationContext(), crear_pasajero.class);
-                        Intent a = new Intent(this, crear_pasajero.class);
                         i.putExtra("dato", etPhone.getText().toString());
-                        startActivity(i);
-                        startActivity(a);
                         i.putExtra("telefono",numero);
+                        startActivity(i);
+
+
                     });
                     break;
                 case R.id.rbConductor:
                     btnRedireccionar.setOnClickListener(view -> {
                         Intent i = new Intent(getApplicationContext(),crear_conductor.class);
-                        Intent a = new Intent(this, crear_conductor.class);
+
                         i.putExtra("dato", etPhone.getText().toString());
-                        startActivity(i);
-                        startActivity(a);
                         i.putExtra("telefono",numero);
+                        startActivity(i);
+
+
                     });
                     break;
                 default:

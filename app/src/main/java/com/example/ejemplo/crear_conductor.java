@@ -130,7 +130,7 @@ public class crear_conductor extends AppCompatActivity {
                     if (response.equalsIgnoreCase("Registro exitoso")) {
                         Toast.makeText(crear_conductor.this, "Conductor Creado", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
-                        startActivity(new Intent(getApplicationContext(), Login.class));
+                        startActivity(new Intent(getApplicationContext(), com.example.ejemplo.Vista.principal_conductor.class));
                         finish();
 
                     } else {
