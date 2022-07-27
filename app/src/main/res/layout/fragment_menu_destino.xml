@@ -61,6 +61,7 @@
             android:layout_weight="1"
             android:background="@drawable/style_border_button_desplegar_menu"
             android:ems="10"
+            android:hint="@string/hintPrecio"
             android:inputType="number" />
     </LinearLayout>
 

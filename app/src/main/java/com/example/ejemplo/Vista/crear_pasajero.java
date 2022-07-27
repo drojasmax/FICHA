@@ -1,4 +1,4 @@
-package com.example.ejemplo;
+package com.example.ejemplo.Vista;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,7 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ejemplo.Vista.Login;
+import com.example.ejemplo.R;
 
 import java.util.Calendar;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.example.ejemplo;
+package com.example.ejemplo.Vista;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Toast;
+
+import com.example.ejemplo.R;
 
 public class redireccionar_pasajero_conductor extends AppCompatActivity {
     private EditText etPhone;

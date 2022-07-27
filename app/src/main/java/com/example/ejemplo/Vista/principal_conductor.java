@@ -8,7 +8,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -34,6 +33,8 @@ public class principal_conductor extends AppCompatActivity implements Navigation
 
         //Fragmento principal
     }
+
+
 
     private void Init(){
         toolbar = findViewById(R.id.toolbar);

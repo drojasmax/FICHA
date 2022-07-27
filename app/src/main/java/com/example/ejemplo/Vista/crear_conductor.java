@@ -1,4 +1,4 @@
-package com.example.ejemplo;
+package com.example.ejemplo.Vista;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,17 +20,11 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ejemplo.Vista.Login;
+import com.example.ejemplo.R;
 
-import java.security.KeyManagementException;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 
 public class crear_conductor extends AppCompatActivity {
     Button btnFecha;
