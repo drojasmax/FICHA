@@ -65,7 +65,7 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="15dp"
                 android:background="#7B7D7D"
-                android:text="@string/iniciar_sesion"
+                android:text="@string/iniciarsesion"
                 android:textColor="#FFF"
                 android:textSize="18sp"
                 tools:ignore="TextContrastCheck" />
@@ -79,19 +79,16 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/imageView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:id="@+id/imageView4"
+                    android:layout_width="381dp"
+                    android:layout_height="383dp"
                     android:adjustViewBounds="false"
-                    android:contentDescription="TODO"
-                    android:cropToPadding="true"
-                    android:scaleType="centerCrop"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    android:scaleType="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/dog_in_car" />
+                    app:layout_constraintVertical_bias="0.0"
+                    app:srcCompat="@drawable/imagenlogin" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

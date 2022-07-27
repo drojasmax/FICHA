@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Ejemplo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
             android:name=".crear_pasajero"
             android:exported="false" />
         <activity
@@ -39,10 +42,10 @@
             android:value="AIzaSyBTPrD5Bj591ELSXvzRDgKUuJSz33nThkk" />
 
         <activity
-            android:name=".Vista.principal_conductor"
+            android:name=".Vista.principal_pasajero"
             android:exported="true" />
         <activity
-            android:name=".Vista.principal_pasajero"
+            android:name=".Vista.principal_conductor"
             android:exported="true"
             android:label="@string/title_activity_maps" />
         <activity

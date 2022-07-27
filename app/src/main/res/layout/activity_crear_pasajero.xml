@@ -26,13 +26,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/HolaP"
-            android:textSize="24sp" />
-
-        <TextView
             android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,6 +120,10 @@
             android:minHeight="48dp"
             android:text="Foto"
             android:textColorHint="#757575" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/btnAgregar"

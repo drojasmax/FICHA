@@ -86,4 +86,7 @@
     <string name="password">pass</string>
     <string name="Ficha">Ficha</string>
     <string name="imagenPerro">imagenPerro</string>
+    <string name="IconoPersona">iconoPersona</string>
+    <string name="editarNombre">editarNombre</string>
+    <string name="editarApellido">editarApellido</string>
 </resources>
