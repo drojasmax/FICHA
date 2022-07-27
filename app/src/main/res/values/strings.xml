@@ -1,6 +1,7 @@
 <resources>
     //Strings - Duvan
     <string name="app_name">Ejemplo</string>
+    <string name="hintPrecio">Ingrese un precio razonable</string>
     <string name="cargandoDialog">Esperando confirmación de conductor...</string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="title_activity_google_maps_api">google_maps_api</string>

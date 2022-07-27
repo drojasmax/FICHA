@@ -22,7 +22,7 @@
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2115" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_baseline_support_24.xml" value="0.2115" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/drawable/ic_call.xml" value="0.1" />
-        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.25" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_conductor.xml" value="0.18" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/activity_principal_pasajero.xml" value="0.1" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/dialogo_de_carga.xml" value="0.22" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_clasificacion.xml" value="0.13632246376811594" />
@@ -31,6 +31,7 @@
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_mi_vehiculo.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_mis_ingresos.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_pago.xml" value="0.13632246376811594" />
+        <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_solicitudes.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/fragment_solicitudes_t.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/header.xml" value="0.13632246376811594" />
         <entry key="..\:/Users/DUVAN/AndroidStudioProjects/FICHA/app/src/main/res/layout/item_solicitudes.xml" value="0.13632246376811594" />

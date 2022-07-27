@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".redireccionar_pasajero_conductor">
+    tools:context=".Vista.redireccionar_pasajero_conductor">
 
     <TextView
         android:id="@+id/textView7"

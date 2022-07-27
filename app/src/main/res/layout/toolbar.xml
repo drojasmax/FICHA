@@ -19,6 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/DimGray"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"
                 app:menu="@menu/menu_pasajero"
                 app:title="toolbarTittle" />
         </com.google.android.material.appbar.CollapsingToolbarLayout>

@@ -1,4 +1,4 @@
-package com.example.ejemplo;
+package com.example.ejemplo.Vista;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,13 +20,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.ejemplo.Vista.Login;
+import com.example.ejemplo.R;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-public class crear_pasajero extends AppCompatActivity {
+public class crear_conductor extends AppCompatActivity {
     Button btnFecha;
     EditText etFecha;
     private int dia, mes, ano;
@@ -34,11 +34,11 @@ public class crear_pasajero extends AppCompatActivity {
     EditText etNombre, etApellido, etCorreo, etContra, etFoto;
     Button btnRegistrar;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_crear_pasajero);
-
+        setContentView(R.layout.activity_crear_conductor);
         //Fecha
         btnFecha = (Button)findViewById(R.id.btnFecha);
         etFecha = (EditText)findViewById(R.id.etFecha);
@@ -60,7 +60,7 @@ public class crear_pasajero extends AppCompatActivity {
                     dia=c.get(Calendar.DAY_OF_MONTH);
                     mes=c.get(Calendar.MONTH);
                     ano=c.get(Calendar.YEAR);
-                    DatePickerDialog datePickerDialog = new DatePickerDialog(crear_pasajero.this, new DatePickerDialog.OnDateSetListener() {
+                    DatePickerDialog datePickerDialog = new DatePickerDialog(crear_conductor.this, new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker datePicker, int dayOfMonth, int monthOfYear, int year) {
                             etFecha.setText(dayOfMonth+"/"+monthOfYear+"/"+year);
@@ -83,7 +83,9 @@ public class crear_pasajero extends AppCompatActivity {
                 insertarDatos();
             }
         });
+
     }
+
     private void insertarDatos() {
         final String nombre = etNombre.getText().toString().trim();
         final String apellido = etApellido.getText().toString().trim();
@@ -116,24 +118,24 @@ public class crear_pasajero extends AppCompatActivity {
             return;
         } else {
             progressDialog.show();
-            StringRequest request = new StringRequest(Request.Method.POST, "http://200.29.219.25:3307/duvan/crearPasajero.php", new Response.Listener<String>() {
+            StringRequest request = new StringRequest(Request.Method.POST, "http://200.29.219.25:3307/duvan/crearConductor.php", new Response.Listener<String>() {
                 @Override
                 public void onResponse(String response) {
                     if (response.equalsIgnoreCase("Registro exitoso")) {
-                        Toast.makeText(crear_pasajero.this, "Pasajero Creado", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(crear_conductor.this, "Conductor Creado", Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                         startActivity(new Intent(getApplicationContext(), Login.class));
                         finish();
 
                     } else {
-                        Toast.makeText(crear_pasajero.this, response, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(crear_conductor.this, response, Toast.LENGTH_SHORT).show();
                         progressDialog.dismiss();
                     }
                 }
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(crear_pasajero.this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(crear_conductor.this, error.getMessage(), Toast.LENGTH_SHORT).show();
                     progressDialog.dismiss();
                 }
             })
@@ -153,8 +155,13 @@ public class crear_pasajero extends AppCompatActivity {
                     return params;
                 }
             };
-            RequestQueue requestQueue = Volley.newRequestQueue(crear_pasajero.this);
+            RequestQueue requestQueue = Volley.newRequestQueue(crear_conductor.this);
             requestQueue.add(request);
         }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }
